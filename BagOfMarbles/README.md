@@ -1,6 +1,4 @@
-Parker Mayer
-CS260
-1/16/23
+Parker Mayer, CS260, 1/16/23
 
 # Assignment 1: Bag of Marbles
 
