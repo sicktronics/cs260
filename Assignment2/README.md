@@ -15,7 +15,7 @@ In terms of values we need to know, a few would be:
 - The type of data that the queue will need to be able to manage.
 - Pointers, since those will be used to link the elements together.
 
-##Prompt 2: Based on what we know about linked lists, design a list data structure that allows us to add (insert) or remove (delete) values at a given location in the list (instead of the top of a stack or the front or back of a queue):
+## Prompt 2: Based on what we know about linked lists, design a list data structure that allows us to add (insert) or remove (delete) values at a given location in the list (instead of the top of a stack or the front or back of a queue):
 1. What functions are we likely to need for a list to function like this?
 
 The two main functions I envision would be:
