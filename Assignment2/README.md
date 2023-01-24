@@ -36,7 +36,7 @@ I believe we would still need to know the same information as for the queue:
 - The type of data that the queue will need to be able to manage.
 - Pointers, since those will be used to link the elements together.
 
-![image](QueueDesign.png)
+![image](ListDesign.png)
 
 ## Note: this design does not feel fully nailed down to me, so I will continue to research and try to get a clearer picture of the specifics of how these designs would be implemented.
 
