@@ -8,6 +8,8 @@ Parker Mayer, CS260, 1/23/23
 - Since we are dealing with a queue, in which data comes in one side and out the other, I think it would make sense to have an "add element to head" ("enqueue") function and a "remove element from tail" ("dequeue") function.
 - Additionally, as was discussed during lecture, it might make sense to have readHead and readTail functions. Eventually, a readAnyElement function could be implemented.
 
+![image](QueueDesign.png)
+
 2. What values will we need to know about the structure for our queue to function properly?
 
 In terms of values we need to know, a few would be:
