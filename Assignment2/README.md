@@ -21,11 +21,12 @@ In terms of values we need to know, a few would be:
 1. What functions are we likely to need for a list to function like this?
 
 The two main functions I envision would be:
-- An insert function (would need to know the location of the element to be inserted)
-- A remove function (would need to know the location of the element to be removed)
+- An insert function (would need to know the location of the element to be inserted).
+- A remove function (would need to know the location of the element to be removed).
 - Additionally, like the queue, a readValue function could be implemented, given the location of the element to be read.
 
 2. What values will we need to know about the structure for our list to function properly?
+
 A few ideas I generated....
 - The elements we would need to insert the new element between?
 - The element we would want to remove.
