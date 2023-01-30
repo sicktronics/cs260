@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
     queue.enqueue(6);
     cout << "   Front element: " << queue.peek() << endl;
     queue.dequeue();
-    cout << "   Front element: " << queue.peek() << "\n" << endl;
+    cout << "   Front element: " << queue.peek() << endl;
 
     // Test 2: Adding/removing multiple elements
     cout << "Test 2: Adding/removing multiple elements." << endl;
@@ -33,9 +33,9 @@ int main(int argc, char **argv) {
     cout << "   Front element: " << queue.peek() << endl;
     queue.dequeue();
     cout << "   Front element: " << queue.peek() << endl;
-        queue.dequeue();
+    queue.dequeue();
     cout << "   Front element: " << queue.peek() << endl; 
-        queue.dequeue();
+    queue.dequeue();
     cout << "   Front element: " << queue.peek() << endl;    
 
 }
@@ -71,12 +71,3 @@ int main(int argc, char **argv) {
 
 // Note: This assignment is partly to get you some practice with basic pointers if you have not used them much, to get you thinking about dynamically 
 // sizing containers, and to think about what might be efficient and what might be able to be improved.
-
-// TODO:
-/*
-*   - [DONE] create a element.h file
-*   - create a linked_list.h file
-*   - set up this file
-*   - run some tests
-*   - all files - add ref to what was covered in class
-*/
