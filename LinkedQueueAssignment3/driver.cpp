@@ -1,3 +1,45 @@
+#include <iostream>
+#include "element.h"
+#include "linked_list.h"
+
+/*
+* Parker Mayer
+* CS 260
+* 1/29/23
+* Assignment 3: Linked Queue
+*/
+
+using std::cout;
+using std::endl;
+
+int main(int argc, char **argv) {
+
+    LinkedList<int> queue;
+
+    // Tests
+
+    // Test 1: Adding/removing one element
+    cout << "Test 1: Adding/removing one element." << endl;
+    queue.enqueue(6);
+    cout << "   Front element: " << queue.peek() << endl;
+    queue.dequeue();
+    cout << "   Front element: " << queue.peek() << "\n" << endl;
+
+    // Test 2: Adding/removing multiple elements
+    cout << "Test 2: Adding/removing multiple elements." << endl;
+    queue.enqueue(7);
+    queue.enqueue(8);
+    queue.enqueue(9);
+    cout << "   Front element: " << queue.peek() << endl;
+    queue.dequeue();
+    cout << "   Front element: " << queue.peek() << endl;
+        queue.dequeue();
+    cout << "   Front element: " << queue.peek() << endl; 
+        queue.dequeue();
+    cout << "   Front element: " << queue.peek() << endl;    
+
+}
+
 // Assignment 3 (Linked Queue):
 // 1. Based on what we know about linked lists, stacks, and queues, design a linked queue 
 //    (a queue using a linked-list to store the data in the structure)
@@ -32,9 +74,9 @@
 
 // TODO:
 /*
-*   - create a node.h file
+*   - [DONE] create a element.h file
 *   - create a linked_list.h file
 *   - set up this file
 *   - run some tests
-*
+*   - all files - add ref to what was covered in class
 */
