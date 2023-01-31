@@ -7,7 +7,6 @@
 * There are three methods: enqueue, dequeue, and peek.
 */
 
-
 // The LinkedList class
 template <typename ElemType> class LinkedList{
 
@@ -39,28 +38,29 @@ template <typename ElemType> class LinkedList{
         // Dequeue method allows us to remove an element from the front of the queue
         ElemType dequeue(){
 
-            // Return -1 if empty (note that this will throw an
-            // exception if ElemType is not an int....Working on
+            // Return -1 if empty (note that this will cause
+            // errors if ElemType is not an int....Working on
             // a fix).
             if(front == nullptr) {
                 // return opt.value();
                 return -1;
             } 
 
+
+
             // Grab the value currently at the front to return it
             ElemType removed = front->value;
             // Temporarily store the front
             Element<ElemType> *oldFront = front;
-            // Move the front to the next element in the queue
-            front = front->nextElem;
-
-            // If the queue becomes empty, return to original
-            // 'empty' state (front and back are null)
-            if(front == nullptr){
+            // If we're about to remove the last element in the queue, reset to null (empty queue).
+            // Otherwise, move the front to the next element in the queue if we're not about to remove the final element.
+            if(front==back){
+                front=nullptr;
                 back = nullptr;
+            } else {
+                front = front->nextElem;
             }
-
-            // And delete the old front element.
+            // Delete the old front element.
             delete oldFront;
 
             // Return the removed value
@@ -69,8 +69,8 @@ template <typename ElemType> class LinkedList{
 
         // The peek method returns the value of the front element.
         ElemType peek(){
-            // Return -1 if empty (note that this will throw an
-            // exception if ElemType is not an int....Working on
+            // Return -1 if empty (note that this will cause
+            // errors if ElemType is not an int....Working on
             // a fix).
             if(back == nullptr) {
                 // return opt.value();
