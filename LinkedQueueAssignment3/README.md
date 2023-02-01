@@ -30,7 +30,7 @@ Below is my design for the linked queue:
 
 - enqueue(). According to https://www.bigocheatsheet.com/ I believe this is equivalent to a "Singly-Linked List" insertion operation, which has an average and worst case of O(1).
 - dequeue(). Similar to above, I believe this would be equivalent to a "Singly-Linked List" deletion operation, which also has an average and worst case of O(1).
-- peek(). I believe this is equivalent to a "Singly-Linked List" access operation, which has an average and worst-case runtime of O(n).
+- peek(). (Update after reviewing lecture materials). Since this is just examining the front element, this would also be O(1).
 
 ## 4. "Tests: Be sure to include at least one test for each piece of functionality that should verify that your code is working!"
 
