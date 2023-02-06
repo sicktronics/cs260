@@ -18,5 +18,12 @@ using std::endl;
 
 int main(int argc, char **argv){
 
+    ArbitraryList list;
 
+    cout << list.insert(8, 0) << endl;
+    // cout << list.front->prevNode->value << endl;
+    // cout << list.front->nextNode->value << endl;
+    cout << list.insert(9, 1) << endl;              // HMMMM....
+    cout << list.front->value << endl; 
+    cout << list.front->nextNode->value << endl; 
 }

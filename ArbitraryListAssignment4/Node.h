@@ -1,8 +1,7 @@
 #pragma once
 /*
 * NOTE: I originally used this file for Assignment 3, and am
-* re-using it here (just changing the struct name from 'Element'
-* to 'Node').
+* using a slightly modified version here.
 *
 * This templated struct (public by default) stores information
 * on a single "node" that will live in our linked list.
@@ -13,15 +12,17 @@
 
 struct Node{
 
-    // A node has two attributes:
+    // A node has three attributes:
     int value;          // (1) The value it holds,
-    Node *nextNode;  // (2) A pointer to the address of the next node.
+    Node *prevNode;     // (2) A pointer to the address of the previous node,
+    Node *nextNode;     // (3) A pointer to the address of the next node.
 
     Node() {}    // Default constructor
     
     // Our constructor that takes the two attributes.
-    Node(int val, Node *nxt) {
+    Node(int val, Node *prev, Node *next) {
         this->value = val;
-        this->nextNode = nxt;
+        this->prevNode = prev;
+        this->nextNode = next;
     }
 };  // End of Node struct.

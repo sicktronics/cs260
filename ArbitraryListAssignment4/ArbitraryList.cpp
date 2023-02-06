@@ -15,46 +15,67 @@ class ArbitraryList {
 
         // This method allows us to insert a new node
         // into an arbitrary position in the list.
-        bool insert(int position, int value) {
+        bool insert(int value, int position) {
 
-            // Array version:
+            Node *newNode = new Node(value, NULL, NULL);
 
-                // if(position < 0){
-                //     position = 0;
-                // } else if (position > endOfList){
-                //     position = endOfList;
-                // }
+            if(position < 0){
+                position = 0;
+            } else if (position > endPos){
+                position = endPos;
+            }
 
-                for(int i = 0; i < position; i++){
-                    // iterate over nodes
-                    temp = temp->nextNode;
-                    cout << "temp: " << temp << endl;
-                    
+            if(front==nullptr){
+                front = leftBound = rightBound = newNode;
+            }else{
+
+                if(position == 0) {
+
+                    leftBound->prevNode = newNode;
+                    newNode->nextNode = leftBound;
+                    front = newNode;
+                } else {
+
+                    for(int i = position; i > 1; i--){
+                    leftBound = leftBound->nextNode;
                 }
-                return true;
+                if(leftBound->nextNode == NULL){
 
-                // // shift later than position down one position
-                // for(int i = endOfList; i >= position; --i){
-                //     internalStorage[i] = internalStorage[i - 1];
-                // }
+                    leftBound->nextNode = newNode;
+                    newNode->prevNode = leftBound;
 
-                // internalStorage[position] = value;
-                // endOfList++;
+                }else{
+                    rightBound = leftBound->nextNode;
 
-                // return true;
+                    leftBound->nextNode = newNode;
+                    rightBound->prevNode = newNode;
 
+                    newNode->prevNode = leftBound;
+                    newNode->nextNode = rightBound;
+                }
+
+                }
+
+                
+            }
+            leftBound = rightBound = front;
+            endPos++;
+            return true;
         }
 
-        ArbitraryList(){}
+        // ArbitraryList(){}
 
-        ArbitraryList(int size){
+        ArbitraryList(){
             front = nullptr;
-            back = front;
-            temp = front;
+            leftBound = front;
+            rightBound = front;
+            endPos = 0;
         }
 
-    private:
+    // private:
         Node *front;
-        Node *back;
-        Node *temp; // temp is a pointer to a node
+        Node *leftBound; // temp is a pointer to a node
+        Node *rightBound;
+        int endPos;
+        
 };
