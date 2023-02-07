@@ -43,5 +43,5 @@ At the time of submission, I am having some issues with segmentation faults that
 - For my implementation, I believe that all three of insert(), remove(), and peek() would be O(n) as they have to iterate over the nodes in the linked list (at most n times). 
 - On a line-by-line level, all individual lines outside of the for loops should be O(1). (See "Driver.cpp" for line-by-line comments.)
 
-## 3. Resources used:
+## Resources used:
 - Inserting nodes into a doubly linked list: https://www.youtube.com/watch?v=le9RuwN2sQg
