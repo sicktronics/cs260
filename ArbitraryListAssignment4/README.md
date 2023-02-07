@@ -3,7 +3,7 @@ Parker Mayer - CS 260 - 2/6/2023
 # Assignment 4: Arbitrary List
 
 ## Note:
-At the time of submission, I am having some issues with segmentation faults that I am actively trying to troubleshoot (occasionally pop up when peek() or remove() are called--I am not sure yet why this is the case but suspect I need to scrap the current design in favor of something simpler). However, I did manage to get several tests to work (see screenshots below). 
+At the time of submission, I am having some issues with segmentation faults that I am actively trying to troubleshoot (occasionally pop up when peek() or remove() are called--I am not sure yet why this is the case but suspect I need to scrap the current design in favor of something simpler). However, I did manage to get several tests to work (see screenshots below) and will try to update with a better implementation. 
 
 ## Design Components
 - A doubly linked list class with
