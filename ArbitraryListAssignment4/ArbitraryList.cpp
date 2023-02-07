@@ -10,6 +10,14 @@
 using std::cout;
 using std::endl;
 
+// Constructor
+ArbitraryList::ArbitraryList(){
+    front = nullptr;
+    leftBound = front;
+    rightBound = front;
+    endPos = 0;
+}
+
 // This method allows us to insert a new node
 // into an arbitrary position in the list.
 bool ArbitraryList::insert(int value, int position) {
@@ -172,10 +180,4 @@ int ArbitraryList::peek(int position){
     }
 }
 
-// Constructor
-ArbitraryList::ArbitraryList(){
-    front = nullptr;
-    leftBound = front;
-    rightBound = front;
-    endPos = 0;
-}   
+   
