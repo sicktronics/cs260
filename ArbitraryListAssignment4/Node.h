@@ -14,12 +14,12 @@ struct Node{
 
     // A node has three attributes:
     int value;          // (1) The value it holds,
-    Node *prevNode;     // (2) A pointer to the address of the previous node,
-    Node *nextNode;     // (3) A pointer to the address of the next node.
+    Node *prevNode;     // (2) A pointer to the previous node,
+    Node *nextNode;     // (3) A pointer to the next node.
 
     Node() {}    // Default constructor
     
-    // Our constructor that takes the two attributes.
+    // Our constructor that takes the three attributes.
     Node(int val, Node *prev, Node *next) {
         this->value = val;
         this->prevNode = prev;
