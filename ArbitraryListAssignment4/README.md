@@ -8,7 +8,7 @@ At the time of submission, I am having some issues with segmentation faults that
 ## Design Components
 - A doubly linked list class with
     - a pointer to the front
-    - pointers to "zero in" on the node we want to remove
+    - pointers to "zero in" on the location in the list we want to target
     - a temporary storage pointer
     - a way to track the "end" of the list
     - an insert method that lets you insert a value at a specified position
