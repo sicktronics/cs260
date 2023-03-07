@@ -11,7 +11,7 @@ This is a basic design that gives us a "database" of sorts that associates each 
     - a hash method that takes the student's last name in all caps and calculates the ASCII sum of the characters (modulo the hashtable's capacity to keep it in range)
     - an insert method that takes a student's last name in all caps, hashes it, and stores it at the "ID number" index (if there's a collison, it simply overwrites it)
     - a search method that takes a student's last name, hashes it, and returns the name currently stored at that index.
-    - a remove method that takes a student's last name, hashes it, and checks to see if the name matches the name stored at that index
+    - a remove method that takes a student's last name, hashes it, and removes if the name matches the name stored at that index
     - member variables that store the hashtable vector, size, capacity, number of inserts, and number of collisions
     - getter methods for capacity, size, fullness, number of inserts, number of collisions (we can use these for helpful stats)
     - toString method for printing out the current table
@@ -21,7 +21,7 @@ This is a basic design that gives us a "database" of sorts that associates each 
     - an insert method that takes a student's last name in all caps, hashes it, and stores it at the "ID number" index
         - If there's a collision at insertion, use a doubleHash method to generate a slightly different ID number (with the goal of lowering number of collisions)
     - a search method that takes a student's last name, hashes it, and returns the name currently stored at that index.
-    - a remove method that takes a student's last name, hashes it, and checks to see if the name matches the name stored at that index
+    - a remove method that takes a student's last name, hashes it, and removes if the name matches the name stored at that index
     - member variables that store the hashtable vector, size, capacity, number of inserts, and number of collisions
     - getter methods for capacity, size, fullness, number of inserts, number of collisions (we can use these for helpful stats)
     - toString method for printing out the current table
@@ -81,7 +81,7 @@ I used double hashing for my smart(er) hashtable. Please see SmartHashTable.cpp 
 As we can see in Tests 4 and 6 above, The double hashing reduced the number of collisions. For a table of size 16, with 6 insertions, the table with no double hashing had 2 collisions,
 while the smart hash table had zero collisions.
 
-If 'n' is the number of characters in a students last name, then the insert for the "dumb" hashtable would be O(n) (because it has to add up the values of each character in the string). the "contains" method is O(n) because we have to hash the incoming value prior to searching the table at that location.
+If 'n' is the number of characters in a student's last name, then the insert for the "dumb" hashtable would be O(n) (because it has to add up the values of each character in the string). the "contains" method is O(n) because we have to hash the incoming value prior to searching the table at that location.
 
 The double hashing insert and "contains" method would also (I believe) be O(n) because, in the event of double hashing on an insert, you would iterate over the characters twice. This gives a worst case of O(2n) which we reduce to O(n).
 
